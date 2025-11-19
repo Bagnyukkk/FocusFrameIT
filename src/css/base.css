@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/DM-Sans-Regular.woff2') format('woff2'),
+    url('../fonts/DM-Sans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/DM-Sans-Medium.woff2') format('woff2'),
+    url('../fonts/DM-Sans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/DM-Sans-Bold.woff2') format('woff2'),
+    url('../fonts/DM-Sans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+    url('../fonts/Raleway-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--white, #fff);
+  font-family: DM Sans, sans-serif;
+  font-style: normal;
+  background: var(--black, #121212);
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 375px;
+  min-width: 320px;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+@media screen and (min-width: 320px) and (max-width: 767.98px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 704px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1080px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1240px;
+  }
+}
+.section {
+  padding: 40px 0;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section {
+    padding: 75px 0;
+  }
+}

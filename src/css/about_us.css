@@ -1,0 +1,118 @@
+.fon-us {
+  color: #bea69e;
+}
+
+.about-text {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.14;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-text {
+    font-size: 48px;
+    letter-spacing: -0.04em;
+    line-height: 1.13;
+  }
+}
+
+.camera {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .camera {
+    margin-bottom: 50px;
+    width: 704px;
+    height: 340px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .camera {
+    margin-bottom: 0;
+    width: 488px;
+    height: 260px;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .camera {
+    margin-bottom: 0;
+    width: 560px;
+    height: 240px;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .school {
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .school {
+    width: 268px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .school {
+    width: 314px;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .text {
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .desk {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .courses {
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .courses {
+    width: 264px;
+    height: 215px;
+    line-height: 1.25;
+  }
+}
+
+  @media screen and (min-width: 1440px) {
+    .courses {
+            width: 276px;
+    }
+  }
+@media screen and (min-width: 1440px) {
+  .courses {
+    width: 276px;
+  }
+}

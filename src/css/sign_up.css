@@ -1,0 +1,199 @@
+.sign-up {
+  max-width: 335px;
+}
+
+.form-caption {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.04em;
+  padding-bottom: 20px;
+}
+
+.accent {
+  color: #BEA69E;
+}
+
+.sign-up-text {
+  max-width: 295px;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  margin-bottom: 41px;
+  min-height: 54px;
+}
+
+.form-input,
+.form-message {
+  background-color: transparent;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  min-height: 46px;
+  padding: 14px 18px;
+  color: white;
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+.form-input {
+  margin-bottom: 8px;
+}
+
+
+.form-message {
+  resize: none;
+  margin-bottom: 40px;
+}
+
+input::placeholder,
+textarea::placeholder {
+opacity: 0.7;
+}
+
+
+.form-btn {
+  display: flex;
+  width: 100%;
+  padding: 14px 127px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background: var(--white, #FFF);
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #121212;
+  transition: background-color 0.3s ease-in-out;
+  border: none;
+}
+
+.form-btn:hover {
+  background-color: #1D1D1D;
+  color: #BEA69E;
+}
+
+.form-agreement {
+  color: rgba(255, 255, 255, 0.50);
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.form-agreement-link {
+  text-decoration: underline;
+}
+
+.sign-up-photo {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+.sign-up {
+  max-width: 480px;
+}
+
+.form-caption {
+  font-size: 48px;
+  margin-top: 95px;
+}
+
+.sign-up-text {
+  min-width: 100%;
+  min-height: 40px;
+}
+
+.form-input,
+.form-message {
+  color: #FFF;
+  font-family: DM Sans;
+  font-size: 16px;
+  line-height: 1.25;
+}
+}
+
+@media screen and (min-width: 1280px) {
+.sign-up-photo {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  padding-bottom: 38px;
+}
+
+.sign-up-cont {
+  display: flex;
+justify-content: space-between;
+}
+
+.sign-up-photo-objectiv {
+  width: 180px;
+  height: 288px;
+  padding: 76px 19px 62px;
+  background: #BEA69E;
+  border-radius: 1000px;
+
+}
+
+.photo-objectiv {
+  border-color: transparent;
+  filter: drop-shadow(-35px 17px 25px rgba(0, 0, 0, 0.26));
+}
+
+.sign-up-photo-camera {
+  padding: 156px 50px 88px;
+  width: 340px;
+  height: 540px;
+  border-radius: 1000px;
+  background: #1D1D1D;
+}
+}
+
+@media screen and (min-width: 1440px) {
+.sign-up-photo-objectiv {
+    padding: 63px 18px;
+    width: 190px;
+    height: 288px;
+  }
+
+  .sign-up-photo-camera {
+    padding: 139px 48px 88px;
+    width: 350px;
+    height: 540px;
+  }
+
+  .photo-objectiv {
+    width: 163px;
+    height: 154px;
+  }
+
+  .photo-camera {
+    width: 254px;
+    height: 313px;
+  }
+}
+
+.sign-in-cont{
+  padding-bottom: 40px
+}
+
+.sing-in-styles {
+  display: flex;
+  gap: 15px;
+}
+
+.sing-in-styles a:hover {
+  text-decoration: underline;
+  color: #BEA69E;
+}
+
+/* .log {
+  font-size: 20px;
+  color: #BEA69E;
+}
+
+.login-box {
+  display: inline-flex;
+  margin-top: -5px;
+}  */
+

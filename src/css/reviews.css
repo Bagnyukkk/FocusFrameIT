@@ -1,0 +1,185 @@
+.section-reviews {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+    .section-reviews {
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+}
+
+@media only screen and (min-width: 1280px) {
+    .section-reviews {
+            padding-top: 75px;
+            padding-bottom: 150px;
+        }
+}
+
+
+.reviews-title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: -0.04em;
+}
+
+@media only screen and (min-width: 768px) {
+    .reviews-title {
+        font-size: 48px;
+        line-height: 1.12;
+    }
+} 
+
+@media only screen and (min-width: 1280px) {
+    .reviews-boxs {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+.review-box {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .review-box {
+        position: relative;
+        margin-right: 32px;
+        margin-left: 32px;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .review-box {
+        
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+.student-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.student-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 4px;
+
+}
+
+@media only screen and (min-width: 768px) {
+    .student-title {
+        line-height: 1.4;
+        /* 140% */
+    }
+}
+
+.students-paragraph {
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 768px) {
+    .students-paragraph {
+        font-size: 14px;
+        line-height: 18px;
+        /* 128.571% */
+    }
+}
+
+.reviews-list {
+    display: flex;
+    margin-top: 4px;
+    padding-left: 66px;
+    gap: 0 4px;
+}
+
+@media only screen and (min-width: 768px) {
+    .reviews-list {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+
+
+.reviews-list-item {
+    fill: #bea69e;
+    stroke: #BEA69E;
+    stroke-width: 1.5;
+}
+
+.reviews-item-gray {
+    fill: #414141;
+    fill: #fff;
+    fill-opacity: 0.2;
+    stroke: #414141;
+    stroke-width: 1.5;
+}
+
+.student-description {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.reviews-paragraph {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 768px) {
+    .reviews-paragraph {
+        font-size: 16px;
+        line-height: 20px;
+        /* 125% */
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .reviews-paragraph {
+        min-width: 490px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .reviews-paragraph {
+        min-width: 570px;
+    }
+}
+
+
+@media only screen and (max-width: 1279.98px) {
+    .reviews-none {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .reviews-icon {
+      width: 20px;
+      height: 20px;
+    }
+}
+
+
