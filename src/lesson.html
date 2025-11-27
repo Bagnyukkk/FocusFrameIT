@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Lesson — Focus.Frame</title>
+  <link rel="stylesheet" href="css/lesson.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <header class="header dashboard-header">
+    <div class="fix-container header-container container">
+      <nav class="breadcrumbs">
+        <ul class="breadcrumbs-list">
+          <li class="breadcrumbs-item">
+            <a href="./my_account.html" class="breadcrumbs-link">
+              Головна
+            </a>
+          </li>
+
+          <li class="breadcrumbs-separator">
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 9L5 5L1 1"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </li>
+
+          <li class="breadcrumbs-item">
+            <a href="#my_courses" class="breadcrumbs-link">
+              Мої курси
+            </a>
+          </li>
+
+          <li class="breadcrumbs-separator">
+            <svg
+              width="6"
+              height="10"
+              viewBox="0 0 6 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 9L5 5L1 1"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </li>
+
+          <li class="breadcrumbs-item">
+            <span class="breadcrumbs-current">
+              Focus.Frame Basic
+            </span>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="notif-center" id="notifCenter">
+        <h2 class="notif-section-title">Today</h2>
+      </div>
+
+      <div class="progress-center" id="progressCenter">
+        <h2 class="progress-title">Progress Analytics</h2>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="lesson-page">
+      <!-- SIDEBAR -->
+      <aside class="lesson-sidebar">
+        <h3>Course Content</h3>
+        <div id="modulesSidebar" class="modules-sidebar"></div>
+
+        <div class="sidebar-section">
+          <h4>Lesson Materials</h4>
+          <div id="sidebarMaterials"></div>
+          <button
+            class="sidebar-btn sidebar-scroll"
+            data-target="materials"
+          >
+            Open materials
+          </button>
+        </div>
+
+        <div class="sidebar-section">
+          <h4>Homework</h4>
+          <p id="sidebarHwStatus" class="sidebar-hw-status">No files</p>
+          <button
+            class="sidebar-btn sidebar-scroll secondary"
+            data-target="homework"
+          >
+            Go to homework
+          </button>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="lesson-content">
+        <!-- Заголовок уроку -->
+        <h1 id="lessonTitle"></h1>
+        <p id="lessonDuration" class="duration"></p>
+
+        <!-- Відео -->
+        <div class="video-container">
+          <video id="lessonVideo" controls poster="">
+            <source id="videoSrc" src="" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Таби -->
+        <nav class="lesson-tabs" aria-label="Lesson sections">
+          <button class="lesson-tab is-active" data-tab="overview">
+            Overview
+          </button>
+          <button class="lesson-tab" data-tab="materials">
+            Materials
+          </button>
+          <button class="lesson-tab" data-tab="homework">
+            Homework
+          </button>
+          <button class="lesson-tab" data-tab="notes">
+            Notes
+          </button>
+          <button class="lesson-tab" data-tab="comments">
+            Comments
+          </button>
+          <button class="lesson-tab" data-tab="quiz">
+            Quiz
+          </button>
+        </nav>
+
+        <!-- TAB: OVERVIEW -->
+        <section
+          class="lesson-section is-active"
+          data-tab-panel="overview"
+        >
+          <section class="lesson-info">
+            <h2>Lesson Direction</h2>
+            <div id="lessonContent"></div>
+          </section>
+        </section>
+
+        <!-- TAB: MATERIALS -->
+        <section
+          class="lesson-section materials"
+          data-tab-panel="materials"
+        >
+          <h3>Materials</h3>
+          <div id="materialsBox"></div>
+        </section>
+
+        <!-- TAB: HOMEWORK -->
+        <section class="lesson-section" data-tab-panel="homework">
+          <h2>Homework</h2>
+          <p class="lesson-description">
+            The task for this lesson: complete the practice as described in
+Lesson Direction and upload your work. 
+          </p>
+
+          <label class="hw-label" for="homeworkComment">
+            Comment for mentor
+          </label>
+          <textarea
+            id="homeworkComment"
+            class="hw-textarea"
+            placeholder="Опиши, що ти хотіла показати в цих фото..."
+          ></textarea>
+
+          <p class="hw-small-hint">
+            Files are attached via the button <b>+ Add file</b> below.
+          </p>
+
+          <div class="hw-upload-box">
+            <label for="hwInput" class="hw-upload-btn">+ Add file</label>
+            <input type="file" id="hwInput" multiple hidden />
+            <p class="hw-hint">
+              Allowed: JPG, PNG, PDF, ZIP (max 10MB)
+            </p>
+          </div>
+
+          <div id="hwPreview" class="hw-preview-list"></div>
+
+          <div class="hw-buttons-row">
+            <button id="openHWModal" class="hw-open-btn">
+              Open homework
+            </button>
+            <button id="submitHW" class="hw-submit-btn">
+              Submit Homework
+            </button>
+          </div>
+        </section>
+
+        <!-- MODAL: HOMEWORK -->
+        <div id="hwModal" class="hw-modal">
+          <div class="hw-modal-content">
+            <span id="hwModalClose" class="hw-modal-close">&times;</span>
+            <h3>Your submitted homework</h3>
+            <div id="hwModalFiles"></div>
+          </div>
+        </div>
+
+<!-- TAB: NOTES -->
+<section class="lesson-section" data-tab-panel="notes">
+  <h3>Notes</h3>
+  <p class="lesson-subtext">
+    Only you can see these notes. 
+  </p>
+
+  <div class="notes-toolbar">
+    <div class="notes-toolbar-left">
+      <div class="notes-search">
+        <input
+          id="notesSearch"
+          type="text"
+          placeholder="Search in notes..."
+          class="notes-search-input"
+        />
+      </div>
+    </div>
+
+    <div class="notes-toolbar-right">
+      <button type="button" class="notes-btn" id="notesClearBtn">
+        <span class="notes-btn-icon">🗑</span>
+        <span class="notes-btn-label">Clear</span>
+      </button>
+
+      <button type="button" class="notes-btn" id="notesCopyBtn">
+        <span class="notes-btn-icon">📋</span>
+        <span class="notes-btn-label">Copy</span>
+      </button>
+
+      <button type="button" class="notes-btn" id="notesExportBtn">
+        <span class="notes-btn-icon">⤓</span>
+        <span class="notes-btn-label">Export</span>
+      </button>
+
+      <button type="button" class="notes-btn" id="notesFullscreenBtn">
+        <span class="notes-btn-icon">⛶</span>
+        <span class="notes-btn-label">Fullscreen</span>
+      </button>
+    </div>
+  </div>
+
+  <textarea
+    id="commentInput"
+    placeholder="Write your notes..."
+    rows="8"
+  ></textarea>
+</section>
+
+<!-- NOTES FULLSCREEN MODAL -->
+<div id="notesModal" class="notes-modal">
+  <div class="notes-modal-inner">
+    <div class="notes-modal-header">
+      <h3>My notes</h3>
+      <button
+        type="button"
+        id="notesModalClose"
+        class="notes-modal-close-btn"
+      >
+        ×
+      </button>
+    </div>
+
+    <div class="notes-modal-toolbar">
+      <input
+        id="notesModalSearch"
+        type="text"
+        placeholder="Search in notes..."
+        class="notes-modal-search"
+      />
+      <span id="notesModalCount" class="notes-modal-count"></span>
+    </div>
+
+    <div id="notesModalBody" class="notes-modal-body"></div>
+  </div>
+</div>
+
+
+
+        <!-- TAB: COMMENTS -->
+        <!-- <section class="lesson-section" data-tab-panel="comments">
+          <h3>Comments</h3>
+          <p class="lesson-subtext">
+            Тут студенти можуть ставити запитання по уроку, а ментор —
+            відповідати. Поки що все зберігається локально (як демо).
+          </p>
+
+          <form class="comment-form" id="commentForm">
+            <label class="ff-label">
+              Your comment
+              <textarea
+                id="commentText"
+                name="commentText"
+                placeholder="Постав запитання або поділись враженнями від уроку..."
+                rows="3"
+              ></textarea>
+            </label>
+            <button type="submit" class="send-comment secondary">
+              Send comment
+            </button>
+          </form>
+
+          <div id="commentsList" class="comments-list"></div>
+        </section> -->
+
+        <!-- TAB: QUIZ -->
+<!-- TAB: QUIZ -->
+<section class="lesson-section" data-tab-panel="quiz">
+  <h2>Lesson quiz</h2>
+  <p class="lesson-subtext">
+    Take the test to reinforce the lesson material.
+  </p>
+
+  <div id="quizContainer" class="quiz-container"></div>
+
+  <div class="quiz-controls">
+    <button id="startQuizBtn" class="quiz-btn primary">Start quiz</button>
+    <button id="submitQuizBtn" class="quiz-btn" style="display:none;">Submit</button>
+    <button id="retryQuizBtn" class="quiz-btn secondary" style="display:none;">Try again</button>
+  </div>
+
+  <div id="quizResult" class="quiz-result"></div>
+</section>
+
+
+        <!-- Навігація між уроками -->
+        <div class="lesson-nav">
+          <button id="prevLessonBtn" class="send-comment">
+            ← Prev
+          </button>
+          <button id="nextLessonBtn" class="send-comment">
+            Next →
+          </button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="./lessons.js"></script>
+  <script type="module" src="./lesson.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

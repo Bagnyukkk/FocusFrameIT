@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | Focus.Frame</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/portfolio.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="fix-container header-container container">
+      <div class="header-container-mob">
+        <div class="header-logo">
+          <a href="my_account.html" class="header-logo-link">
+            <svg class="logo-icon" width="127" height="20"><use href="/img/icons.svg#icon-logo"></use></svg>
+          </a>
+        </div>
+        
+        <ul class="nav nav-icons">
+          <li class="nav-item"><a href="./my_account.html">Dashboard</a></li>
+          <li class="nav-item"><a href="./portfolio.html" class="active-link">Portfolio</a></li>
+          <li class="nav-item"><a href="./index.html#our_courses">All Courses</a></li>
+          <li class="nav-item icon">
+            <a href="./profile.html" class="icon-button">
+              <svg class="icon-header"><use href="/img/icons.svg#icon-user"></use></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a href="#" id="logoutBtn" class="sign-up-button">Log Out</a>
+    </div>
+  </header>
+
+  <main class="portfolio-main">
+    <div class="container">
+      
+      <div class="portfolio-header">
+        <div>
+          <h1>My Creative Space</h1>
+          <p>Organize your best shots into albums</p>
+        </div>
+        <button id="createAlbumBtn" class="primary-btn">+ New Album</button>
+      </div>
+
+      <div id="albumsContainer" class="albums-grid">
+        </div>
+
+    </div>
+  </main>
+
+  <div id="albumModal" class="custom-modal">
+    <div class="modal-box">
+      <h3>Create New Album</h3>
+      <input type="text" id="newAlbumName" placeholder="Album Name (e.g. Summer 2025)" />
+      <input type="text" id="newAlbumDesc" placeholder="Description (optional)" />
+      <div class="modal-actions">
+        <button id="saveAlbumBtn" class="primary-btn">Create</button>
+        <button class="secondary-btn close-modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="viewAlbumModal" class="custom-modal fullscreen-modal">
+    <div class="modal-box large-box">
+      <div class="modal-header-row">
+        <h2 id="currentAlbumTitle">Album Title</h2>
+        <button class="secondary-btn close-modal">Close &times;</button>
+      </div>
+      
+      <div class="upload-area">
+        <input type="file" id="photoInput" accept="image/*" hidden />
+        <label for="photoInput" class="upload-label">
+          <span>⬆ Upload Photo</span>
+        </label>
+        <p class="upload-hint">Supported: JPG, PNG (Max 2MB)</p>
+      </div>
+
+      <div id="photosContainer" class="photos-grid">
+        </div>
+    </div>
+  </div>
+<script type="module" src="./main.js"></script>
+<script type="module" src="./portfolio.js"></script>
+</body>
+</html>

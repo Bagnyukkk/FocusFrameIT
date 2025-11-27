@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <load ="partials/header.html" />
     <main>
         <section class="section" id="sign_up">
   <div class="container sign-up-cont">
@@ -19,45 +20,38 @@
         message and we'll get back to you shortly.
       </p>
       <form class="sign-up-form">
-          <input
-          class="form-input"
-          type="text"
-          id="user-name"
-          name="user-name"
-          placeholder="Enter your name"
-          pattern="[A-Za-z]"
-        />
 
-          <input
+        <input
           class="form-input"
           type="email"
           id="user-email"
           name="user-email"
           placeholder="Enter your email"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-          />
+          required
+        />
+        <input
+      class="form-input"
+      type="password"
+      id="user-password"
+      name="user-password"
+      placeholder="Enter your password"
+      minlength="6"
+      autocomplete="new-password"
+      required
+    />
         
-
-        <!-- <textarea 
-          class="form-message"
-          name="user-message"
-          id="user-message"
-          rows="6"
-          placeholder="Message"
-        ></textarea> -->
         <div class="sign-in-cont form-agreement sing-in-styles">
           <p class="form-agreement">
-            Doesn't have an account?
+            Don't have an account?
           </p>
-          <a href="./auth.html">Sing Up</span></a> 
+          <a href="./auth.html">Sign Up</a> 
         </div>
-  <a href="./my_account.html" class="sign-up-button"> my account </a>
-          <button class="form-btn" type="submit">Send</button>
+
+        <button class="form-btn" type="submit">Sign In</button>
 
         <p class="form-agreement">
-          By clicking on “Send” button, you agree to our
-          <a class="form-agreement-link" href="">Privacy Policy</a>, and allow
-          Promodo to use this information for marketing purposes.
+          By clicking on “Sign In” button, you agree to our
+          <a class="form-agreement-link" href="">Privacy Policy</a>.
         </p>
       </form>
     </div>
@@ -106,6 +100,8 @@
   </div>
 </section>
     </main>
+    <load ="partials/footer.html" />
+     <script type="module" src="./auth.js"></script>
      <script type="module" src="./main.js"></script>
   </body>
 </html>

@@ -2,8 +2,382 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/img/favicon.ico" />
+    <!-- icons -->
+    <link rel="icon" type="image/svg+xml" href="/img/Favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My account | FocusFrame</title>
+    <title>FocusFrame</title>
+    <meta
+      name="description"
+      content="Discover the art of photography with our professional courses. Learn to capture stunning images, work with lighting and composition. Suitable for beginners and experienced photographers alike."
+    />
+    <!-- css style -->
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/account.css" />
+    <link rel="stylesheet" href="./css/chat.css" />
   </head>
+  <body>
+  <header class="header">
+  <div class="fix-container header-container container">
+    <div class="header-container-mob">
+      <div class="header-logo">
+        <a
+          href="../index.html"
+          target="_blank"
+          class="header-logo-link"
+          aria-label="Focus.Frame"
+        >
+          <svg class="logo-icon" width="127" height="20">
+            <use href="./img/icons.svg#icon-logo"></use>
+          </svg>
+        </a>
+      </div>
+
+      <div class="header-right-items">
+        <div class="header-camera-icon">
+          <a
+            href="#sign_up"
+            class="camera-icon-link"
+            aria-label="Sign up to contact us"
+          >
+            <svg class="camera-icon" width="16" height="16">
+              <use href="/img/icons.svg#icon-camera"></use>
+            </svg>
+          </a>
+        </div>
+        <button type="button" class="burger-btn" aria-label="Open menu">
+          <svg class="burger-icon" width="40" height="28">
+            <use href="/img/icons.svg#icon-Nav"></use>
+          </svg>
+        </button>
+      </div>
+      <ul class="nav nav-icons">
+        <li class="nav-item"><a href="./my_account.html">Dashboard</a></li>
+        
+        <li class="nav-item"><a href="./index.html#our_courses">All Courses</a></li>
+        
+        <li class="nav-item"><a href="./index.html#our_mentors">Mentors</a></li>
+
+        <li class="nav-item icon gap-icon">
+          <button id="notifBtn" class="icon-button">
+            <svg class="icon-header">
+                <use href="/img/icons.svg#icon-bell"></use>
+              </svg>
+          </button>
+        </li>
+        <li class="nav-item icon">
+        <button id="msgBtn" class="icon-button">
+            <svg class="icon-header">
+                <use href="/img/icons.svg#icon-stats-bars2"></use>
+              </svg>
+        </button>
+        </li>
+        <li class="nav-item icon">
+          <a href="./profile.html" id="accBtn" class="icon-button">
+            <svg class="icon-header">
+              <use href="/img/icons.svg#icon-user"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <a href="#" id="logoutBtn" class="sign-up-button"> Log Out </a>
+  </div>
+
+<div class="notif-center" id="notifCenter">
+  <h2 class="notif-section-title">Today</h2>
+
+  <div class="notif-card">
+    <div class="notif-icon-wrap">
+      <svg><use href="/img/icons.svg#icon-bell"></use></svg>
+    </div>
+    <div class="notif-text">
+      <h4>Lesson Updated</h4>
+      <p>New materials added</p>
+    </div>
+    <span class="notif-time">Just now</span>
+  </div>
+
+  <h2 class="notif-section-title">Yesterday</h2>
+
+  <div class="notif-card">
+    <div class="notif-icon-wrap">
+      <svg class="icon-header"><use href="/img/icons.svg#icon-bubbles4"></use></svg>
+    </div>
+    <div class="notif-text">
+      <h4>New reply</h4>
+      <p>You have a new comment</p>
+    </div>
+    <span class="notif-time">19 hours ago</span>
+  </div>
+</div>
+
+<div class="progress-center" id="progressCenter">
+
+  <h2 class="progress-title">Progress Analytics</h2>
+
+  <div class="progress-card">
+    <div class="progress-label">Lessons completed this week</div>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 70%"></div>
+    </div>
+    <span class="progress-value">70%</span>
+  </div>
+
+  <div class="progress-grid">
+
+    <div class="progress-small-card">
+      <h4>Lessons completed</h4>
+      <div class="progress-number">12</div>
+      <span class="progress-sub">this week</span>
+    </div>
+
+    <div class="progress-small-card">
+      <h4>Hours studied</h4>
+      <div class="progress-number">5.3 h</div>
+    </div>
+
+  </div>
+
+</div>
+</header>
+
+<div class="mobile-menu-backdrop"></div>
+<div class="mobile-menu">
+  <button
+    type="button"
+    class="mobile-menu__close close-menu"
+    aria-label="Close menu"
+  >
+    <svg width="32" height="32">
+      <use href="/img/icons.svg#icon-x-icon"></use>
+    </svg>
+  </button>
+  <div class="mobile-menu-wrapper">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__list-item list-item-active close-menu">
+        <a href="./my_account.html">My Cabinet</a>
+      </li>
+      <li class="mobile-menu__list-item close-menu">
+        <a href="./profile.html">My Profile</a>
+      </li>
+      <li class="mobile-menu__list-item close-menu">
+        <a href="./index.html#our_courses">All Courses</a>
+      </li>
+      <li class="mobile-menu__list-item close-menu">
+        <a href="./index.html#reviews">Reviews</a>
+      </li>
+      <li class="mobile-menu__list-item close-menu">
+        <a href="#" id="logoutBtnMobile">Log Out</a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu-photo-container"></div>
+  </div>
+</div>
+
+<!-- scroll to top -->
+<button id="scrollToTopBtn">&uarr;</button>  
+    <main>
+<section class="hero-sect account-hero-card">
+  <div class="container account-hero-wrapper">
+
+    <h1 class="account-hero-title">
+      Welcome back, <span class="highlight">Angelina</span>!
+    </h1>
+
+    <p class="account-hero-sub">Ready to continue your creative journey?</p>
+
+    <div class="account-hero-progress">
+
+      <div class="account-circle">
+        <span>47%</span>
+      </div>
+
+      <span class="account-progress-label">Overall progress</span>
+
+      <div class="account-progress-line">
+        <div style="width: 47%"></div>
+      </div>
+    </div>
+
+    <button id="continueLessonBtn" class="account-hero-btn">Continue last lesson</button>
+
+  </div>
+</section>
+
+
+<section class="quick-actions">
+  <div class="container">
+
+    <h2 class="qa-title">Quick Actions</h2>
+
+    <!-- Tabs -->
+    <div class="qa-tabs">
+      <button class="qa-tab active" data-tab="progress">In Progress</button>
+      <button class="qa-tab" data-tab="completed">Completed</button>
+      <button class="qa-tab" data-tab="wishlist">Wishlist</button>
+
+      <div class="qa-search">
+        <svg width="18" height="18">
+          <use href="/img/icons.svg#icon-search"></use>
+        </svg>
+      </div>
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="qa-content">
+
+      <!-- IN PROGRESS -->
+      <div class="qa-cards tab-content active" id="progress">
+        <!-- CARD 1 -->
+        <div class="qa-card fade">
+          <div class="qa-card-left">
+            <div class="qa-card-img">
+              <img src="./img/hero/girl1_mob.webp" alt="Course">
+            </div>
+
+            <div class="qa-info">
+              <h3 class="qa-course-title">Basics of Photography</h3>
+              <div class="qa-progress-line"><div style="width: 40%"></div></div>
+              <p class="qa-meta">Mentor: Alex Lebedev</p>
+              <p class="qa-meta">Level: Beginner</p>
+            </div>
+          </div>
+
+          <button class="qa-btn">Continue</button>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="qa-card fade">
+          <div class="qa-card-left">
+            <div class="qa-card-img">
+              <img src="./img/hero/boy1_mob.webp" alt="Course">
+            </div>
+
+            <div class="qa-info">
+              <h3 class="qa-course-title">Portrait Lighting</h3>
+              <div class="qa-progress-line"><div style="width: 10%"></div></div>
+              <p class="qa-meta">Mentor: Alex Lebedev</p>
+              <p class="qa-meta">Level: Beginner</p>
+            </div>
+          </div>
+
+          <button class="qa-btn">Start</button>
+        </div>
+      </div>
+
+      <!-- COMPLETED -->
+      <div class="qa-cards tab-content" id="completed">
+        <div class="qa-card fade">
+          <div class="qa-card-left">
+            <div class="qa-card-img">
+              <img src="./img/hero/girl2_mob.webp" alt="Course">
+            </div>
+
+            <div class="qa-info">
+              <h3 class="qa-course-title">Landscape Photography</h3>
+              <div class="qa-progress-line"><div style="width: 100%"></div></div>
+              <p class="qa-meta">Mentor: Julia B.</p>
+              <p class="qa-meta">Completed ✔</p>
+            </div>
+          </div>
+
+          <button class="qa-btn">View</button>
+        </div>
+      </div>
+
+      <!-- WISHLIST -->
+      <div class="qa-cards tab-content" id="wishlist">
+        <div class="qa-card fade">
+          <div class="qa-card-left">
+            <div class="qa-card-img">
+              <img src="./img/hero/boy1_mob.webp" alt="Course">
+            </div>
+
+            <div class="qa-info">
+              <h3 class="qa-course-title">Creative Editing</h3>
+              <p class="qa-meta">Mentor: Mark Smith</p>
+              <p class="qa-meta">Level: Intermediate</p>
+            </div>
+          </div>
+
+          <button class="qa-btn">Add</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="dashboard-extras">
+  <div class="container extras-grid">
+    
+    <div class="dash-card portfolio-card">
+      <div class="dash-card-header">
+        <h3>Portfolio</h3>
+        <a href="./portfolio.html" class="view-all-btn">View All</a>
+      </div>
+      
+      <div class="portfolio-grid">
+        <div class="portfolio-item large">
+          <img src="./img/hero/girl1_mob.webp" alt="Portfolio Main">
+        </div>
+        <div class="portfolio-item"><img src="./img/hero/boy1_mob.webp" alt="Work"></div>
+        <div class="portfolio-item"><img src="./img/hero/girl2_mob.webp" alt="Work"></div>
+        <div class="portfolio-item"><img src="./img/about_us/about-us_mob.webp" alt="Work"></div>
+        <div class="portfolio-item"><img src="./img/sign_up/luxoptica_desk@1x.webp" alt="Work"></div>
+        <div class="portfolio-item"><img src="./img/sign_up/video_desk@1x.webp" alt="Work"></div>
+        <div class="portfolio-item"><img src="./img/hero/hero-mob.webp" alt="Work"></div>
+      </div>
+    </div>
+
+    <div class="dash-card forum-card">
+      <div class="dash-card-header">
+        <h3>Forum</h3>
+      </div>
+
+      <div class="forum-list" id="forumList">
+        <div class="forum-item">
+          <img src="./img/mentors/emilia_smith.webp" class="forum-avatar" alt="User">
+          <div class="forum-info">
+            <h4>Portrait Photography lighting?</h4>
+            <p>By Yana.Frame</p>
+          </div>
+          <span class="forum-time">14 min ago</span>
+        </div>
+
+        <div class="forum-item">
+          <img src="./img/mentors/alex_lebedev.webp" class="forum-avatar" alt="User">
+          <div class="forum-info">
+            <h4>Best lens for landscapes</h4>
+            <p>By Alex Lebedev</p>
+          </div>
+          <span class="forum-time">2 hours ago</span>
+        </div>
+
+        <div class="forum-item">
+          <img src="./img/mentors/mia_dubrovska.webp" class="forum-avatar" alt="User">
+          <div class="forum-info">
+            <h4>Editing in Lightroom vs Capture One</h4>
+            <p>By Mia D.</p>
+          </div>
+          <span class="forum-time">5 hours ago</span>
+        </div>
+      </div>
+
+      <a href="./forum.html" class="forum-btn-main">Go to Forum</a>
+    </div>
+
+  </div>
+</section>
+    </main>
+    <load ="partials/footer.html" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./dashboard.js"></script>
+    <script type="module" src="./chat.js"></script>
+  </body>
+</html>

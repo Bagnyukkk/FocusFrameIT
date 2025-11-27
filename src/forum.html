@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Forum | Focus.Frame</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./css/forum.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="fix-container header-container container">
+      <div class="header-container-mob">
+        <div class="header-logo">
+          <a href="my_account.html" class="header-logo-link">
+            <svg class="logo-icon" width="127" height="20"><use href="/img/icons.svg#icon-logo"></use></svg>
+          </a>
+        </div>
+        <ul class="nav nav-icons">
+          <li class="nav-item"><a href="./my_account.html">Dashboard</a></li>
+          <li class="nav-item"><a href="./portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a href="./forum.html" class="active-link">Community</a></li>
+          <li class="nav-item icon">
+            <a href="./profile.html" class="icon-button"><svg class="icon-header"><use href="/img/icons.svg#icon-user"></use></svg></a>
+          </li>
+        </ul>
+      </div>
+      <a href="#" id="logoutBtn" class="sign-up-button">Log Out</a>
+    </div>
+  </header>
+
+  <main class="forum-main">
+    <div class="container forum-layout">
+      
+      <aside class="forum-sidebar">
+        <button id="newTopicBtn" class="create-topic-btn">+ New Topic</button>
+        
+        <div class="sidebar-group">
+          <h3>Feeds</h3>
+          <ul class="filter-list">
+            <li class="active" data-filter="all">All Topics</li>
+            <li data-filter="my">My Posts</li>
+            <li data-filter="popular">Popular</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <h3>Topics</h3>
+          <ul class="filter-list tags">
+            <li data-tag="Critique">📸 Photo Critique</li>
+            <li data-tag="Gear">⚙️ Gear Talk</li>
+            <li data-tag="Help">🆘 Help & Q&A</li>
+            <li data-tag="Inspiration">✨ Inspiration</li>
+          </ul>
+        </div>
+      </aside>
+
+      <section class="forum-feed">
+        <div class="feed-header">
+          <h2 id="feedTitle">All Topics</h2>
+          <div class="search-bar">
+            <input type="text" id="searchForum" placeholder="Search discussions...">
+          </div>
+        </div>
+
+        <div id="topicsContainer" class="topics-list">
+          </div>
+      </section>
+
+    </div>
+  </main>
+
+  <div id="topicModal" class="custom-modal">
+    <div class="modal-box">
+      <h3>Start a Discussion</h3>
+      
+      <input type="text" id="topicTitle" placeholder="Title (e.g., How to fix noisy photos?)" />
+      
+      <select id="topicTag">
+        <option value="General">Select Category...</option>
+        <option value="Critique">📸 Photo Critique</option>
+        <option value="Gear">⚙️ Gear Talk</option>
+        <option value="Help">🆘 Help & Q&A</option>
+        <option value="Inspiration">✨ Inspiration</option>
+      </select>
+
+      <textarea id="topicContent" rows="5" placeholder="Share your thoughts or ask a question..."></textarea>
+
+      <div class="modal-actions">
+        <button id="postTopicBtn" class="primary-btn">Post</button>
+        <button class="secondary-btn close-modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+  <script type="module" src="./forum.js"></script>
+</body>
+</html>

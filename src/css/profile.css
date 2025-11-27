@@ -1,0 +1,228 @@
+/* ====== PROFILE PAGE CONTAINER ====== */
+
+.profile-main {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  color: #ffffff;
+}
+
+.profile-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+
+/* ====== TOP CARD (Photo + Name + Update Btn) ====== */
+
+.profile-card {
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid #303030;
+}
+
+.profile-name-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-name {
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.update-btn {
+  background: #d9b48a;
+  color: #000;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  width: fit-content;
+}
+
+.update-btn:hover {
+  background: #e6c3a1;
+}
+
+
+/* ====== SECTIONS (Personal Info, Security, Notifications) ====== */
+
+.info-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+
+/* ====== GRID OF INFO ITEMS ====== */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.info-card {
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 16px 20px;
+}
+
+.info-card.clickable {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.info-card.clickable:hover {
+  border-color: #d9b48a;
+}
+
+.info-label {
+  font-size: 13px;
+  color: #b7b7b7;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.info-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+}
+
+
+/* ====== MODAL BACKDROP ====== */
+
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(3px);
+  z-index: 900;
+}
+
+
+/* ====== MODAL WINDOW ====== */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  width: 380px;
+  padding: 24px;
+  z-index: 1000;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -48%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.modal-content h3 {
+  font-size: 22px;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.modal-content label {
+  font-size: 14px;
+  color: #d0d0d0;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.modal-content input:focus {
+  border-color: #d9b48a;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.save-btn {
+  background: #d9b48a;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.close-btn {
+  background: #333;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #444;
+}
+
+
+/* ====== RESPONSIVE ====== */
+
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+}

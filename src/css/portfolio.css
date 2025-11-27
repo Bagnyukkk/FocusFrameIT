@@ -1,0 +1,266 @@
+/* css/portfolio.css */
+
+.portfolio-main {
+  padding-top: 120px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+}
+
+.portfolio-header h1 {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.portfolio-header p {
+  color: #888;
+}
+
+/* BUTTONS */
+.primary-btn {
+  background: #d1a476;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: #e8b98f;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid #555;
+  color: #ccc;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.secondary-btn:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* ALBUMS GRID */
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.album-card {
+  background: #151515;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+  border-color: #d1a476;
+}
+
+.album-cover {
+  height: 180px;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.album-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.album-info {
+  padding: 20px;
+}
+
+.album-info h3 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.album-info p {
+  font-size: 13px;
+  color: #666;
+}
+
+.album-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+  opacity: 0; /* Ховаємо, показуємо при наведенні */
+  transition: 0.2s;
+}
+
+.album-card:hover .album-actions {
+  opacity: 1;
+}
+
+.action-icon-btn {
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-icon-btn:hover {
+  background: #d1a476;
+  color: #000;
+}
+
+/* MODALS */
+.custom-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #333;
+  width: 400px;
+  text-align: center;
+}
+
+.modal-box.large-box {
+  width: 90%;
+  max-width: 1200px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.modal-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+
+/* Inputs */
+.modal-box input[type="text"] {
+  width: 100%;
+  background: #111;
+  border: 1px solid #333;
+  padding: 12px;
+  margin-bottom: 15px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* UPLOAD AREA */
+.upload-area {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.upload-label {
+  display: inline-block;
+  border: 2px dashed #444;
+  padding: 15px 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #888;
+  transition: 0.2s;
+}
+
+.upload-label:hover {
+  border-color: #d1a476;
+  color: #d1a476;
+}
+
+.upload-hint {
+  font-size: 12px;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* PHOTOS INSIDE ALBUM */
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.photo-card {
+  position: relative;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.photo-card:hover img {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.photo-actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.fav-btn.active {
+  color: #d1a476; /* Gold heart */
+}

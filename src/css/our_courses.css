@@ -145,3 +145,37 @@
     line-height: 1.25;
   }
 }
+
+/* Стилізація кнопки Learn More */
+.courses-item .course-link {
+  display: inline-block;       /* Щоб працювали відступи */
+  margin-top: 24px;            /* Відступ від тексту опису */
+  padding: 12px 32px;          /* Внутрішні відступи (висота/ширина) */
+  
+  border: 1px solid #bea69e;   /* Золота рамка */
+  border-radius: 30px;         /* Заокруглені краї */
+  
+  color: #bea69e;              /* Золотий текст */
+  font-size: 14px;
+  font-weight: 700;            /* Жирний шрифт */
+  text-transform: uppercase;   /* Великі літери */
+  text-decoration: none;       /* Прибрати підкреслення */
+  
+  transition: all 0.3s ease;   /* Плавна анімація */
+}
+
+/* Ефект при наведенні */
+.courses-item .course-link:hover {
+  background-color: #bea69e;   /* Заливка золотим */
+  color: #121212;              /* Чорний текст */
+  transform: translateY(-3px); /* Легкий підйом вгору */
+  box-shadow: 0 5px 15px rgba(190, 166, 158, 0.2); /* Тінь */
+}
+
+/* На мобільних можна зробити кнопку на всю ширину, якщо хочеш */
+@media only screen and (max-width: 767px) {
+  .courses-item .course-link {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -22,37 +22,42 @@
         message and we'll get back to you shortly.
       </p>
       <form class="sign-up-form">
-        <input
-          class="form-input"
-          type="text"
-          id="user-name"
-          name="user-name"
-          placeholder="Enter your name"
-          pattern="[A-Za-z]"
-        />
+    <input
+      class="form-input"
+      type="text"
+      id="user-name"
+      name="user-name"
+      placeholder="Enter your name"
+      required
+    />
 
-        <input
-          class="form-input"
-          type="email"
-          id="user-email"
-          name="user-email"
-          placeholder="Enter your email"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-        />
+    <input
+      class="form-input"
+      type="email"
+      id="user-email"
+      name="user-email"
+      placeholder="Enter your email"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      required
+    />
 
-        <textarea
-          class="form-message"
-          name="user-message"
-          id="user-message"
-          rows="6"
-          placeholder="Message"
-        ></textarea>
+    <input
+      class="form-input"
+      type="password"
+      id="user-password"
+      name="user-password"
+      placeholder="Enter your password"
+      minlength="6"
+      autocomplete="new-password"
+      required
+    />
+
     <div class="sign-in-cont form-agreement sing-in-styles">
-        <p class="form-agreement">
-            Already have an account?
-        </p>
-        <a href="./sign_in.html">Login</span></a> 
+        <p class="form-agreement">Already have an account?</p>
+        <a href="./sign_in.html">Login</a>
     </div>
+</form>
+
             <!-- <div>
                 <p class="form-agreement">
                 Already have an account? 
