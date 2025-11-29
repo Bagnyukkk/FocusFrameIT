@@ -22,3 +22,35 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Ігнорування файлів, специфічних для користувача, згенерованих Visual Studio Code
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/settings.json
+
+## Ігнорування папок з результатами збірки (build artifacts)
+# Ці папки містять скомпільований код, бібліотеки та інші файли,
+# які генеруються під час процесу збірки.
+obj/
+bin/
+artifacts/
+*.pubxml
+*.publish.xml
+packages/
+*.nupkg
+*.log
+*.tmp
+*.temp
+*.bak
+*.[Pp]rofiler
+*.pidb
+*.snapshot
+*.vspx
+StyleCop.Cache
+$tf/
